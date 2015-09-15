@@ -1,0 +1,14 @@
+---
+- name: update device-mapper
+  yum: name=device-mapper state=latest
+
+- name: Add docker repo
+  template: src=docker-repo.js2 dest=/etc/yum.repos.d/docker.repo
+
+- name: Install Docker
+  yum: name=docker-engine state=latest
+
+- name: add docker configuration file
+  template: src=docker-config.js2 dest=/etc/sysconfig/docker 
+  notify: restart docker
+

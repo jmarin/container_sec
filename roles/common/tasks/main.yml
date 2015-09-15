@@ -1,0 +1,19 @@
+---
+- name: download epel repo
+  get_url: url=http://dl.fedoraproject.org/pub/epel/7/x86_64/e/epel-release-7-5.noarch.rpm dest=/tmp/epel-release-7-5.noarch.rpm
+
+- name: install epel repo
+  command: rpm -Uvh /tmp/epel-release-7-5.noarch.rpm creates=/etc/yum.repos.d/epel.repo
+
+- name: install tar
+  yum: name=tar state=latest
+
+- name: install unzip
+  yum: name=unzip state=latest
+
+- name: install rpm-build
+  yum: name=rpm-build state=latest
+
+- name: install python-lxml
+  yum: name=python-lxml state=latest
+
