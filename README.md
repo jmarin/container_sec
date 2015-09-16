@@ -47,7 +47,7 @@ Scan the image by issuing the following command.
 oscap-docker image rhel7.1 xccdf eval --profile stig-rhel7-server-upstream --report /tmp/rhel7syslog.html ssg-rhel7-xccdf.xml
 ```
 
-This checks agains the Pre-release Draft STIG for Red Hat Enterprise Linux 7 Server profile. In order to see the profiles available for this definition you can run:
+This checks agains the Pre-release Draft STIG for Red Hat Enterprise Linux 7 Server profile. In order to see other profiles available you can run:
 
 ```
 oscap info "ssg-rhel7-xccdf.xml"
