@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This repository includes a proof of concept for assessing the compliance of Docker images through the SCAP standard. A full virtual host is prepared with Docker installed, so a user can pull down a Docker image and run a compliance check on it, according to several different profiles included by default. The OpenSCAP ecosystem allows for customization of these profiles as required by the end user. 
+This repository includes a proof of concept for assessing the compliance of Docker images through the [SCAP](http://scap.nist.gov/) standard. A full virtual host is prepared with Docker installed, so a user can pull down a Docker image and run a compliance check on it, according to several different profiles included by default. The [OpenSCAP](http://open-scap.org/page/Main_Page) ecosystem allows for customization of these profiles as required by the end user. 
 
 ## Running
 
