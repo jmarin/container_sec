@@ -2,6 +2,8 @@
 
 ## Introduction
 
+This repository includes a proof of concept for assessing the compliance of Docker images through the SCAP standard. A full virtual host is prepared with Docker installed, so a user can pull down a Docker image and run a compliance check on it, according to several different profiles included by default. The OpenSCAP ecosystem allows for customization of these profiles as required by the end user. 
+
 ## Running
 
 This project requires [Vagrant](https://www.vagrantup.com/), [Virtualbox](https://www.virtualbox.org/wiki/Downloads) and [Ansible](http://www.ansible.com) to run. It has been tested with `Vagrant 1.7.2`,  `VirtualBox 4.3.20` and `Ansible 1.8.3`, but newer versions should work. Older versions may or may not work. 
