@@ -11,9 +11,6 @@
 - name: install unzip
   yum: name=unzip state=latest
 
-- name: install rpm-build
-  yum: name=rpm-build state=latest
-
 - name: install python-lxml
   yum: name=python-lxml state=latest
 

@@ -39,12 +39,23 @@
 - name: install python-devel
   yum: name=python-devel state=latest
 
+# Install OpenSCAP
+
 - name: build and install openscap
   shell: 'cd /tmp/openscap-1.2.5; ./configure && make && make install'
 
 - name: install openscap-utils
   yum: name=openscap-utils state=latest
 
-- name: clone and build scap-security guide
-  shell: 'git clone https://github.com/OpenSCAP/scap-security-guide.git && cd scap-security-guide && make SSG_VERSION_IS_GIT_SNAPSHOT=no rpm && rpm -i rpmbuild/RPMS/noarch/scap-security-guide-0.1.25-1.el7.centos.noarch.rpm' 
+- name: install scap-security-guide
+  yum: name=scap-security-guide state=latest
+
+- name: copy updated scap ssg file
+  template: src=ssg-rhel7-xccdf.xml dest=/home/vagrant/ssg-rhel7-xccdf.xml
+
+- name: copy updated scap oval file
+  template: src=ssg-rhel7-oval.xml dest=/home/vagrant/ssg-rhel7-oval.xml
+
+- name: copy scap ssg file (CentOS)
+  template: src=ssg-centos7-xccdf.xml dest=/home/vagrant/ssg-centos7-xccdf.xml
 

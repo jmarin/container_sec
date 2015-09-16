@@ -7,8 +7,8 @@
 
 - name: Install Docker
   yum: name=docker-engine state=latest
+  notify: restart docker
 
 - name: add docker configuration file
   template: src=docker-config.js2 dest=/etc/sysconfig/docker 
-  notify: restart docker
-
+  
