@@ -16,7 +16,7 @@ vagrant up
 
 This will boot the virtual machine, which is configured with CentOS 7 as the host operating system. The ansible build script will install some dependencies as well as the OpenSCAP tools, including the OpenSCAP Security Guide. It will also copy recent files from building the Scap Security Guide from source code (see reference down below)
 
-Once the virtual machine is done building, you can connect to it with `vagrant ssh` and make sure the proper environment path is set up:
+Once the virtual machine is done building, you can connect to it with `vagrant ssh` and make sure the proper path environment variable is set up:
 
 ```
 sudo su
@@ -47,7 +47,7 @@ Scan the image by issuing the following command.
 oscap-docker image rhel7.1 xccdf eval --profile stig-rhel7-server-upstream --report /tmp/rhel7syslog.html ssg-rhel7-xccdf.xml
 ```
 
-This checks agains the Pre-release Draft STIG for Red Hat Enterprise Linux 7 Server profile. In order to see other profiles available you can run:
+This checks against the Pre-release Draft STIG for Red Hat Enterprise Linux 7 Server profile. In order to see a list of available profiles you can run:
 
 ```
 oscap info "ssg-rhel7-xccdf.xml"
